@@ -10,7 +10,7 @@ import Foundation
 
 class APIController {
 
-	var user: [User] = []
+	var users: [User] = []
 
 	// The reason we can use the bang operator here is because if the baseURL is wrong we want the app to crash
 	let baseURL = URL(string: "https://randomuser.me/api/?format=json&results=20")!
@@ -38,7 +38,7 @@ class APIController {
 				// setting a newUser instance to use an instance of JSONDecoder and using the decode function to get the data from the api and put it into the UserResult model that we created
 				let newUser = try JSONDecoder().decode(UserResult.self, from: data)
 				print(newUser) // Use this print statement to troubleshoot if there is anything in newUser
-				self.user = newUser.results // We are just putting the data from the api into the user variable declared at the top
+				self.users = newUser.results // We are just putting the data from the api into the user variable declared at the top
 			} catch {
 				NSLog("Error decoding users: \(error)")
 				completion(error)

@@ -19,7 +19,10 @@ struct UserResult: Decodable {
 }
 
 struct User: Decodable {
-	let name: String
+	var name: Name // Name is not a string, but a dictionary
 }
 
+struct Name: Decodable { // Name is nested data in resutls in the JSON on the api
+	var first: String
+}
 
