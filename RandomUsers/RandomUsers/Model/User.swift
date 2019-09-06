@@ -20,11 +20,16 @@ struct UserResult: Decodable {
 
 struct User: Decodable {
 	var name: Name // Name is not a string, but a dictionary
+	var email: String
+	var phone: String
 }
 
+
+// We need to make another struct for the name because we want to access the first name and it is nested inside the name, which is nested inside results
 struct Name: Decodable { // Name is nested data in resutls in the JSON on the api
 	var first: String
 	var last: String
+
 
 }
 

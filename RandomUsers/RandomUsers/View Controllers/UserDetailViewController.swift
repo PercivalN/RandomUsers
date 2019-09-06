@@ -10,6 +10,11 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
 
+
+	@IBOutlet weak var emaillabel: UILabel!
+	@IBOutlet weak var phoneLabel: UILabel!
+
+
 	var user: User? {
 		// This didSet checks to see if the user sent from the UserTableViewController is ready received
 		didSet {
@@ -30,6 +35,8 @@ class UserDetailViewController: UIViewController {
 			let user = user else { return }
 		// Set the user name to be the title of the User Detail View
 		title = user.name.first.capitalized + " " + user.name.last.capitalized
+		emaillabel.text = user.email
+		phoneLabel.text = user.phone
 	}
 	/*
 	// MARK: - Navigation
