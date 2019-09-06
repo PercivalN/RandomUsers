@@ -22,6 +22,7 @@ struct User: Decodable {
 	var name: Name // Name is not a string, but a dictionary
 	var email: String
 	var phone: String
+	var picture: Picture
 }
 
 
@@ -29,7 +30,12 @@ struct User: Decodable {
 struct Name: Decodable { // Name is nested data in resutls in the JSON on the api
 	var first: String
 	var last: String
+}
 
+struct Picture: Decodable {
+	var thumbnail: URL
+	var medium: URL
+	var large: URL
 
 }
 
