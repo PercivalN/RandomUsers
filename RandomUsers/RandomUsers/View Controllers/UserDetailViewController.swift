@@ -13,7 +13,8 @@ class UserDetailViewController: UIViewController {
 
 	@IBOutlet weak var emaillabel: UILabel!
 	@IBOutlet weak var phoneLabel: UILabel!
-
+	@IBOutlet weak var imageView: UIImageView!
+	
 
 	var user: User? {
 		// This didSet checks to see if the user sent from the UserTableViewController is ready received
@@ -37,6 +38,8 @@ class UserDetailViewController: UIViewController {
 		title = user.name.first.capitalized + " " + user.name.last.capitalized
 		emaillabel.text = user.email
 		phoneLabel.text = user.phone
+		guard let imageDate = try? Data(contentsOf: user.picture.large) else { fatalError() }
+		imageView.image = UIImage(data: imageDate)
 	}
 	/*
 	// MARK: - Navigation

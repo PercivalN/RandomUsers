@@ -41,7 +41,7 @@ class UsersTableViewController: UITableViewController {
 		// let a user be something inthe apiController in the users array, and it can be accessed via the indexPath row
 		let user = apiController.users[indexPath.row]
 		cell.textLabel?.text = user.name.first.capitalized + " " + user.name.last.capitalized // capitalized just capitalizes the first letter of the string in the cell
-		guard let imageDate = try? Data(contentsOf: user.picture.thumbnail) else { fatalError() }
+		guard let imageDate = try? Data(contentsOf: user.picture.large) else { fatalError() }
 		cell.imageView?.image = UIImage(data: imageDate) // google url to uimage swift
 		return cell
 	}
