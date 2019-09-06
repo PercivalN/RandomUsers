@@ -14,6 +14,7 @@
 		DD559CF423221B6B00739E3A /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD559CF323221B6B00739E3A /* UsersTableViewController.swift */; };
 		DD559CF623221B8200739E3A /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD559CF523221B8200739E3A /* UserDetailViewController.swift */; };
 		DD559CF92322338700739E3A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD559CF82322338700739E3A /* User.swift */; };
+		DD559CFC232279EE00739E3A /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD559CFB232279EE00739E3A /* APIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DD559CF323221B6B00739E3A /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		DD559CF523221B8200739E3A /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		DD559CF82322338700739E3A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DD559CFB232279EE00739E3A /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				DD559CF223221A6E00739E3A /* Resources */,
 				DD559CF7232232D100739E3A /* View Controllers */,
 				DD559CFA232233A300739E3A /* Model */,
+				DD559CFD2322815500739E3A /* Model Controller */,
 			);
 			path = RandomUsers;
 			sourceTree = "<group>";
@@ -100,6 +103,14 @@
 				DD559CF82322338700739E3A /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DD559CFD2322815500739E3A /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD559CFB232279EE00739E3A /* APIController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				DD559CF623221B8200739E3A /* UserDetailViewController.swift in Sources */,
 				DD559CF92322338700739E3A /* User.swift in Sources */,
 				DD559CF423221B6B00739E3A /* UsersTableViewController.swift in Sources */,
+				DD559CFC232279EE00739E3A /* APIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

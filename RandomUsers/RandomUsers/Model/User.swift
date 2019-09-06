@@ -13,7 +13,7 @@ import Foundation
 // Encodable takes Swift/Objective-C code and converts it into JSON
 // First thing to do in a model is a struct
 // Look at the resutls that are return by the ISP and see what type of data is on there
-struct UserResults: Decodable {
+struct UserResult: Decodable {
 
 	let results: [User]
 }
