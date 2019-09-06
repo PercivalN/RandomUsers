@@ -24,5 +24,7 @@ struct User: Decodable {
 
 struct Name: Decodable { // Name is nested data in resutls in the JSON on the api
 	var first: String
+	var last: String
+
 }
 

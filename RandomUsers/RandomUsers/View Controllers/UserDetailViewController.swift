@@ -20,15 +20,16 @@ class UserDetailViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+		updateViews()
 
 	}
-
+	
 	func updateViews() {
 		// Unwrap the user to make sure there is a user
-		guard let user = user else { return }
+		guard isViewLoaded,
+			let user = user else { return }
 		// Set the user name to be the title of the User Detail View
-		title = user.name.first.capitalized
+		title = user.name.first.capitalized + " " + user.name.last.capitalized
 	}
 	/*
 	// MARK: - Navigation

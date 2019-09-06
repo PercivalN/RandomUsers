@@ -40,7 +40,7 @@ class UsersTableViewController: UITableViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
 		// let a user be something inthe apiController in the users array, and it can be accessed via the indexPath row
 		let user = apiController.users[indexPath.row]
-		cell.textLabel?.text = user.name.first.capitalized // capitalized just capitalizes the first letter of the string in the cell
+		cell.textLabel?.text = user.name.first.capitalized + " " + user.name.last.capitalized // capitalized just capitalizes the first letter of the string in the cell
 		return cell
 	}
 
@@ -97,5 +97,6 @@ class UsersTableViewController: UITableViewController {
 		}
 	}
 
+	
 
 }
