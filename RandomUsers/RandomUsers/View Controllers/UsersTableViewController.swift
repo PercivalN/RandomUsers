@@ -40,7 +40,7 @@ class UsersTableViewController: UITableViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
 		// let a user be something inthe apiController in the users array, and it can be accessed via the indexPath row
 		let user = apiController.users[indexPath.row]
-		cell.textLabel?.text = user.name.first
+		cell.textLabel?.text = user.name.first.capitalized // capitalized just capitalizes the first letter of the string in the cell
 		return cell
 	}
 
@@ -80,14 +80,22 @@ class UsersTableViewController: UITableViewController {
 	}
 	*/
 
-	/*
+
 	// MARK: - Navigation
 
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-	// Get the new view controller using segue.destination.
-	// Pass the selected object to the new view controller.
+		// First we have to identify the segue
+		if segue.identifier == "UserDetailSegue" {
+			// Then we need to create the address that the user is passed to; Then need to create and unwrap the userDetailVC and cast it as UserDetailViewController and if it is not it then just return
+			guard let userDetailVC = segue.destination as? UserDetailViewController else { return }
+			// Now we need the specific spot, or the zipcode, in this case the indexPath, the user data is at; Now we have to create and unwrap the indexPath that is assigned the location in the tableView
+			guard let indexPath = tableView.indexPathForSelectedRow else { return }
+			// The thing that we are sending is the user and we are telling the segue the specific row that the user is on which is indexPath.row
+			let user = apiController.users[indexPath.row]
+			// We have to create an user object in the UserDetailViewController and pass the user to it
+			userDetailVC.user = user
+		}
 	}
-	*/
+
 
 }
